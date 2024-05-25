@@ -1,0 +1,261 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    letter-spacing: 1px; 
+    
+}
+/* styling nav */
+nav{
+    height: 5rem;
+    width: 100%;
+    background-color:#82A0D8;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+
+}
+.nav-brand
+{
+    top: 10px;
+    max-width: 50px;
+    margin-top: 30px;
+    font-weight:bold;
+    font-size: 25px;
+    color:#fff;
+    width:100px;
+}
+.logo
+{
+    padding: 0.3vh 0.3vw;
+    text-align: center;
+}
+.logo img
+{
+    height: 5rem;
+    width:  5rem;
+}
+/* nav items */
+.nav-link
+{
+    margin-left: 200px;
+    display: flex;
+    list-style: none;
+    width: 80vw;
+    padding:0 0.7vw;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav-link li 
+{
+    position: relative;
+    margin-top:20px;
+}
+.nav-link li a{
+    text-decoration: none;
+    margin: 0 0.7vw;
+    color:#fff
+}
+.nav-link li a:hover
+{
+    color: pink;
+}
+.nav-link li a::before
+{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+    background-color:pink;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 0.1;
+}
+.nav-link li a:hover::before
+{
+    width: 80%;
+}
+.login-btn{
+    background-color: #fff;
+    border: 2px solid black;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    margin-left: 2vw;
+    font-size:1rem;
+    cursor: pointer;
+}
+.login-btn:hover{
+    color: #131418;
+    background-color: yellow;
+    border-radius: 2px solid yellow;
+    transition: all ease-in-out 350ms;
+}
+.hamburger{
+    display: none;
+}
+/* Body Post */
+.mainbody
+{
+    background: linear-gradient(90deg, rgba(168,237,234,1) 0%, rgba(254,214,227,1) 100%);
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+}
+.header-post
+{
+    background-color:transparent;
+    padding: 20px;
+    margin-top: 18vh;
+    text-align: center;
+}
+.header-post h1{
+    font-size: 36px;
+    color: #333;
+    font-family: 'FontAweSome';
+    padding-bottom: 40px;
+}
+.post-form
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.post-form textarea{
+    height: 120px;
+    width: 80%;
+    padding:10px;
+    font-size: 16px;
+    border: 5px solid #ddd;
+    margin-right: 10px;
+    font-family: monospace;
+}
+.post-form button[type="submit"]
+{
+    background-color: black;
+    color:#fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.main-content
+{
+    display: flex;
+    justify-content: center;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.post
+{
+    background-color: #fff;
+    width:85%;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.post img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    float:left;
+}
+.onPost
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.onPost h2{
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+}
+.onPost p{
+    font-size: 14px;    
+    color: #999;
+}
+.post-actions
+{
+    justify-content: space-between;
+    display: flex;
+    margin-top: 20px;
+}
+.post-actions .like-button, .post-actions .comment-button
+{
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.like-button.liked
+{
+    background-color: #4362d4;
+}
+.post-likes
+{
+    margin-top: 20px;
+}
+.post-likes p{
+    font-size: 14px;
+    color: #999;
+    margin-left:0;
+}
+.post-comments
+{
+    margin-top: 20px;
+}
+.delete-comment
+{
+    display: flex;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color:#fff;
+    padding:5px 10px;
+}
+@media screen and (max-width:1000px){
+    .hamburger{
+        display: block;
+        position: absolute;
+        color: white;
+        top: 10px;
+        right: 30px;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    .nav-link.show 
+    {
+        position: absolute;
+        top: 5rem;
+        transform: translateX(-200px);
+        width: 100vw;
+        height: calc(100vh - 5rem); 
+        flex-direction: column;
+        background-color: #252525;
+        transition: 0.5s all ease;
+        align-items: center;
+        padding: 0;
+        overflow-y: auto; 
+        justify-content: flex-start;
+       
+    }
+    .nav-link li a {
+        margin-bottom: 10px;
+    }
+    .login-btn{
+        background-color: #fff;
+        border: 2px solid black;
+        border-radius: 2em;
+        padding: 0.6rem 0.8rem;
+        margin-left: 0vw;
+        font-size:1rem;
+        cursor: pointer;
+    }
+}
