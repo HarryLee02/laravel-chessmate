@@ -23,108 +23,46 @@
         </div>
         <!-- Container issue-->
         <div class="container">
-
-            <!-- <div class="select-wrapper">
-                <select class="select">
-                    <option value="" selected="selected">Fix a problem</option>
-                    <option value="problem1">Problem 1</option>
-                    <option value="problem2">Problem 2</option>
-                    <option value="problem3">Problem 3</option>
-                </select>
-                <span class="select-icon entypo-arrow-combo"></span>
-            </div>
-
-            <div class="select-wrapper">
-                <select class="select">
-                    <option value="" selected="selected">Watch videos</option>
-                    <option value="video1">Video 1</option>
-                    <option value="video2">Video 2</option>
-                    <option value="video3">Video 3</option>
-                </select>
-                <span class="select-icon entypo-arrow-combo"></span>
-            </div>
-
-            <div class="select-wrapper">
-                <select class="select">
-                    <option value="" selected="selected">Manage your account</option>
-                    <option value="">Problem 1</option>
-                    <option value="">Problem 2</option>
-                    <option value="">Problem 3</option>
-                </select>
-                <span class="select-icon entypo-arrow-combo"></span>
-            </div>
-
-            <div class="select-wrapper">
-                <select class="select">
-                    <option value="" selected="selected">ChessMate Premium</option>
-                    <option value="">Problem 1</option>
-                    <option value="">Problem 2</option>
-                    <option value="">Problem 3</option>
-                </select>
-                <span class="select-icon entypo-arrow-combo"></span>
-            </div>
-
-            <div class="select-wrapper">
-                <select class="select">
-                    <option value="" selected="selected">Settings</option>
-                    <option value="">Problem 1</option>
-                    <option value="">Problem 2</option>
-                    <option value="">Problem 3</option>
-                </select>
-                <span class="select-icon entypo-arrow-combo"></span>
-            </div>
-
-            <div class="select-wrapper">
-                <select class="select">
-                    <option value="" selected="selected">Policy, safety and copyright</option>
-                    <option value="">Problem 1</option>
-                    <option value="">Problem 2</option>
-                    <option value="">Problem 3</option>
-                </select>
-                <span class="select-icon entypo-arrow-combo"></span>
-            </div> -->
-            <div class="accordion" id="accordionExample">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                         Accordion Item #1
                     </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <strong>This is the first item's accordion body.</strong>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
                         Accordion Item #2
                     </button>
                     </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>This is the second item's accordion body.</strong>
+                        </div>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
                         Accordion Item #3
                     </button>
                     </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>This is the third item's accordion body.</strong>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</body>
-<footer>
     <div class="form-container" onclick="blog()">
         <b class="title">Need more help?</b>
         <p class="steps">Try these steps:</p>
@@ -138,7 +76,8 @@
             </div>
         </div>
     </div>
-</footer>
+</body>
+    
 
 </html>
 <script>
