@@ -18,16 +18,6 @@ class FirebaseAuthController extends Controller
     }
     public function register(Request $request)
     {
-        $data = [
-            'email' => $request->input('email'),
-            'emailVerified' => false,
-            'phoneNumber' => $request->input('phone_number'),
-            'password' => $request->input('password'),
-            'displayName' => $request->input('full_name'),
-        ];
-        
-        
-
         $email = $request->input('email');
         $password = $request->input('password');
         $createdUser = $this->auth->createUserWithEmailAndPassword($email,$password);
