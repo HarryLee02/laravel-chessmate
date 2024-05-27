@@ -1,6 +1,7 @@
     @include('includes.header')
     <title>FAQS</title>
     <link href="{{asset('css/faqs.css')}}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>
 </head>
 <body>
     @include('includes.navbar')
@@ -17,61 +18,57 @@
                 </button>
             </div>
         </div>
-        <!--TEXT-->
-        <div class="form-issue">
-            <p class="heading-form">Please browse help topics below</p>
-        </div>
         <!-- Container issue-->
         <div class="container">
             <div class="accordion" id="accordionPanelsStayOpenExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                        Accordion Item #1
+                        <strong>What is ChessMate?</strong>
                     </button>
                     </h2>
                     <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                         <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong>
+                            <strong>ChessMate</strong> is a website built by a group of students from the University of Information Technology - Viet Nam <i class="fib fib-vn" ></i>. The website is designed to help users improve their chess skills and knowledge. Users can play chess online, read articles about chess, and buy chess-related products from the shop. The website also has a blog where users can post questions and get answers from the community. Currently, the website is under development since it is just a class project. However, any supports and feedbacks from users are highly appreciated and the team might consider further development in the future.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                        Accordion Item #2
+                        Is it free to play?
                     </button>
                     </h2>
                     <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                         <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong>
+                            <strong>This website is free for playing!</strong> We aim to provide a platform for chess enthusiasts to play and improve their skills without any cost. However, for those who want more in-game features or just to support us, we also have a shop where users can buy chess-related products.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                        Accordion Item #3
+                        Is this website completed?
                     </button>
                     </h2>
                     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
                         <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong>
+                            <strong>Not yet.</strong> The group still has a lot of ideas to implement and features to add to the website. If you have any suggestions or feedback, feel free to contact us. We are always open to new ideas and improvements.
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="form-container" onclick="blog()">
-        <b class="title">Need more help?</b>
-        <p class="steps">Try these steps:</p>
-        <div class="inner-container">
-            <div class="row">
-                <div class="col-md-3" style="font-size:70px;"> &#11088</div>
-                <div class="col-md-7">
-                    <b class="post-title">Post to our Blog</b>
-                    <p class="description">Get answers from our assistant</p>
+        <div class="form-container" onclick="blog()">
+            <b class="title">Need more help?</b>
+            <p class="steps">Try these steps:</p>
+            <div class="inner-container">
+                <div class="row">
+                    <div class="col-md-3" style="font-size:70px;"> &#11088</div>
+                    <div class="col-md-7">
+                        <b class="post-title">Post to our Blog</b>
+                        <p class="description">Get answers from our assistant</p>
+                    </div>
                 </div>
             </div>
         </div>
