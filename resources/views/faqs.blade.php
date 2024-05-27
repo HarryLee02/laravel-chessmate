@@ -53,7 +53,7 @@
                     </h2>
                     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
                         <div class="accordion-body">
-                            <strong>Not yet.</strong> The group still has a lot of ideas to implement and features to add to the website. If you have any suggestions or feedback, feel free to contact us. We are always open to new ideas and improvements.
+                            <strong>Not yet.</strong> The group still has a lot of ideas to implement and features to add to the website. If you have any suggestions or feedback, feel free to contact us, we are always open to new ideas and improvements <i class="fa-light fa-face-smile"></i>.
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@
                     <div class="col-md-3" style="font-size:70px;"> &#11088</div>
                     <div class="col-md-7">
                         <b class="post-title">Post to our Blog</b>
-                        <p class="description">Get answers from our assistant</p>
+                        <p class="description">Get answers from the community</p>
                     </div>
                 </div>
             </div>
