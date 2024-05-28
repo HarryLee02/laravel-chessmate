@@ -2,10 +2,7 @@ import {Chess} from './chess.js'
 
 var board = null
 var game = new Chess()
-// var $status = $('#status')
-// var $fen = $('#fen')
-// var $pgn = $('#pgn')
-function onDragStart (source, piece, position, orientation) {
+function onDragStartWhite (source, piece, position, orientation) {
   // do not pick up pieces if the game is over
   if (game.isGameOver()) return false
 
@@ -14,6 +11,16 @@ function onDragStart (source, piece, position, orientation) {
     return false
   }
 }
+function onDragStartBlack (source, piece, position, orientation) {
+  // do not pick up pieces if the game is over
+  if (game.isGameOver()) return false
+
+  // only pick up pieces for the side to move
+  if (piece.search(/^w/) !== -1) {
+    return false
+  }
+}
+
 function makeRandomMove () {
   var possibleMoves = game.moves()
 
@@ -55,7 +62,6 @@ function onSnapEnd () {
 }
 
 function updateStatus() {
-  var status = ''
   var moveColor = 'White'
   
   
@@ -67,7 +73,6 @@ function updateStatus() {
     setTimeout(()=>{
       audio1.play()
     },700);
-    status = 'Game over, ' + moveColor + ' won.'
     $('.modal_placeholder').html(moveColor+' won!<br><span>Checkmate</span>')
     var modal = new bootstrap.Modal(document.getElementById('Modal'))
     modal.show()
@@ -77,8 +82,13 @@ function updateStatus() {
   else if (game.isDraw()) {
     var audio = new Audio('public/sound/game-end.mp3')
     audio.play()
-    status = 'Game over, drawn position'
-    $('.modal_placeholder').html('Draw!<br><span>Checkmate</span>')
+    if (game.isStalemate()) {
+      $('.modal_placeholder').html('Draw!<br><span>Stalemate!</span>')
+    } else if (game.isInsufficientMaterial()) {
+      $('.modal_placeholder').html('Draw!<br><span>Insufficient Material!</span>')
+    } else if (game.isThreefoldRepetition()) {
+      $('.modal_placeholder').html('Draw!<br><span>Threefold Repetition!</span>')
+    }
     var modal = new bootstrap.Modal(document.getElementById('Modal'))
     modal.show()
   }
@@ -105,7 +115,7 @@ var config = {
   draggable: true,
   position: 'start',
   orientation:'white',
-  onDragStart: onDragStart,
+  onDragStart: onDragStartWhite,
   onDrop: onDrop,
   onSnapEnd: onSnapEnd
 }
@@ -113,36 +123,43 @@ board = Chessboard('myBoard', config)
 
 updateStatus()
 
-// $('#setRuyLopezBtn').on('click', function () {
-//   var config = {
-//     draggable: true,
-//     position: 'r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R',
-//     onDragStart: onDragStart,
-//     onDrop: onDrop,
-//     onSnapEnd: onSnapEnd
-//   }
-//   board = Chessboard('myBoard', config)
-//   game.load('r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq d6 0 2')
-// })
-
-
-
-$('#changeTheme').on('click', function () {
-  var randomNumber = Math.floor(Math.random()*8);
-  var randomTheme = theme_array[randomNumber%8];
+$('#black').on('click', function () {
   var config = {
-    pieceTheme: randomTheme,
     draggable: true,
-    position: game.fen(),
-    onDragStart: onDragStart,
+    position: 'start',
+    onDragStart: onDragStartBlack,
     onDrop: onDrop,
     onSnapEnd: onSnapEnd
   }
-  current_piece_theme = randomTheme
   board = Chessboard('myBoard', config)
-  game.load(game.fen())
-  // game.load('r1bqkbnr/pppp1ppp/2n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq d6 0 2')
+  game.reset()
+  makeRandomMove()
+  updateStatus()
 })
+
+$('#white').on('click', function () {
+  var config = {
+    draggable: true,
+    position: 'start',
+    onDragStart: onDragStartWhite,
+    onDrop: onDrop,
+    onSnapEnd: onSnapEnd
+  }
+  board = Chessboard('myBoard', config)
+  game.reset()
+  updateStatus()
+})
+
+$('#resign').on('click', function () {
+  var audio = new Audio('public/sound/game-end.mp3')
+  audio.play()
+  $('.modal_placeholder').html('You lost!<br><span>Resigned</span>')
+  var modal = new bootstrap.Modal(document.getElementById('Modal'))
+  modal.show()
+  game.reset()
+  updateStatus()
+})
+
 $('#restart').on('click', function () {
   var config = {
     pieceTheme: current_piece_theme,

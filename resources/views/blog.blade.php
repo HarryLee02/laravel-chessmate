@@ -70,6 +70,7 @@
 
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
     import { getDatabase ,ref,set,query,orderByChild, startAt,limitToFirst} from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js';
+    import { } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js"
     const firebaseConfig = {
         apiKey: "AIzaSyA31lKznykEusxB3k85qKgalt4ILO28cfI",
         authDomain: "chessmate-577b0.firebaseapp.com",
