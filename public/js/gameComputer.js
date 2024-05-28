@@ -156,16 +156,23 @@ $('#resign').on('click', function () {
   $('.modal_placeholder').html('You lost!<br><span>Resigned</span>')
   var modal = new bootstrap.Modal(document.getElementById('Modal'))
   modal.show()
+  var config = {
+    draggable: true,
+    position: 'start',
+    onDragStart: onDragStartWhite,
+    onDrop: onDrop,
+    onSnapEnd: onSnapEnd
+  }
+  board = Chessboard('myBoard', config)
   game.reset()
   updateStatus()
 })
 
 $('#restart').on('click', function () {
   var config = {
-    pieceTheme: current_piece_theme,
     draggable: true,
     position: 'start',
-    onDragStart: onDragStart,
+    onDragStart: onDragStartWhite,
     onDrop: onDrop,
     onSnapEnd: onSnapEnd
   }
