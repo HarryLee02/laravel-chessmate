@@ -13,12 +13,12 @@
                     <br>
                     <div id="myBoard"style="width: 410px; margin: 0 auto;"></div>
                     <br>
-                    <button id="white" type="button" class="btn btn-light">Start this position as White</button>
-                    <button id="black" type="button" class="btn btn-light">Start this position as Black</button>
+                    <button id="white" type="button" class="btn btn-light">Play as White</button>
+                    <button id="black" type="button" class="btn btn-light">Play as Black</button>
 
-                    <button id="clear" type="button" class="btn btn-light">Clear board</button>
-                    <button id="flip" type="button" class="btn btn-light">Flip board</button>
-                    <button id="resign" type="button" class="btn btn-danger">Start this position</button>
+                    <button id="clear" type="button" class="btn btn-light">Clear</button>
+                    <button id="flip" type="button" class="btn btn-light">Flip</button>
+                    <button id="resign" type="button" class="btn btn-danger">Resign</button>
                 </div>
             </div>
 

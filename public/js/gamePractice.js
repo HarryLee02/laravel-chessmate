@@ -93,6 +93,7 @@ board = Chessboard('myBoard', config)
 
 $('#black').on('click', function () {
   var config = {
+    orientation:'black',
     draggable: true,
     position: board.position(),
     onDragStart: onDragStartBlack,
@@ -108,6 +109,7 @@ $('#black').on('click', function () {
 
 $('#white').on('click', function () {
   var config = {
+    orientation:'white',
     draggable: true,
     position: board.position(),
     onDragStart: onDragStartWhite,
@@ -115,7 +117,6 @@ $('#white').on('click', function () {
     onSnapEnd: onSnapEnd
   }
   board = Chessboard('myBoard', config)
-  board.orientation('white')
   game.reset()
   updateStatus()
 })
@@ -138,8 +139,6 @@ $('#resign').on('click', function () {
   updateStatus()
 })
 
-$('#flip').on('click', function(){
-  board.flip()
-})
+$('#flip').on('click', board.flip)
 
 $('#clear').on('click', board.clear)

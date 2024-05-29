@@ -118,6 +118,7 @@ updateStatus()
 
 $('#black').on('click', function () {
   var config = {
+    orientation:'black',
     draggable: true,
     position: 'start',
     onDragStart: onDragStartBlack,
@@ -125,7 +126,6 @@ $('#black').on('click', function () {
     onSnapEnd: onSnapEnd
   }
   board = Chessboard('myBoard', config)
-  board.orientation('black')
   game.reset()
   makeRandomMove()
   updateStatus()
@@ -133,6 +133,7 @@ $('#black').on('click', function () {
 
 $('#white').on('click', function () {
   var config = {
+    orientation:'white',
     draggable: true,
     position: 'start',
     onDragStart: onDragStartWhite,
