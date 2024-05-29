@@ -57,6 +57,22 @@
                         </div>
                     </div>
                 </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        Want to support us?
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>Bravo!</strong> 
+                            <br>
+                            Not many would think of supporting a class project, but you did! You can support us by donating via the link below. Thank you for your support <i class="bi bi-balloon-heart"></i>.
+                            <br>
+                            <a class="btn btn-primary" href="paypal.me/harrylee02" role="button">Link</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="form-container" onclick="blog()">

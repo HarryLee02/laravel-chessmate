@@ -103,7 +103,7 @@ nav{
     display: none;
 }
 /* Body */
-.mainbody
+.mainbody, body
 {
     background: linear-gradient(90deg, rgba(168,237,234,1) 0%, rgba(254,214,227,1) 100%);
     overflow-x: hidden;
