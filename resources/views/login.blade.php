@@ -3,11 +3,16 @@
     <link href="{{asset('css/login.css')}}" rel="stylesheet" type="text/css">
 </head>
 <body>
-@if(session()->get('error'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            {{ session()->get('error') }}
-             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
+    @if(session()->has('danger'))
+        <div id="liveAlertPlaceholder">
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <div>
+                    <strong>Error</strong>
+                    <br>
+                    {{ session()->get('danger') }}
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
     @endif
     <div class="blur">
         <h1>Form: Sign In</h1>

@@ -36,7 +36,7 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                        Is it free to play?
+                        <strong>Is it free to play?</strong>
                     </button>
                     </h2>
                     <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
@@ -48,7 +48,7 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                        Is this website completed?
+                        <strong>Is this website completed?</strong>
                     </button>
                     </h2>
                     <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
@@ -59,17 +59,17 @@
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                        Want to support us?
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                        <strong>Want to support us?</strong>
                     </button>
                     </h2>
-                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
                         <div class="accordion-body">
                             <strong>Bravo!</strong> 
                             <br>
-                            Not many would think of supporting a class project, but you did! You can support us by donating via the link below. Thank you for your support <i class="bi bi-balloon-heart"></i>.
+                            Not many would think of supporting a class project, but you did! You can support us by donating via the link below. Thank you for your support <i class="fa-light fa-heart"></i>.
                             <br>
-                            <a class="btn btn-primary" href="paypal.me/harrylee02" role="button">Link</a>
+                            <a class="btn btn-primary" href="https://paypal.me/harrylee02" role="button">Link</a>
                         </div>
                     </div>
                 </div>

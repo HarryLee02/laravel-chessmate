@@ -41,7 +41,11 @@ class FirebaseAuthController extends Controller
     {
         $email = $request->input('email');
         $password = $request->input('password');
-        $response = $this->auth->signInWithEmailAndPassword($email, $password);
+        try {
+            $response = $this->auth->signInWithEmailAndPassword($email, $password);
+        } catch (\Kreait\Firebase\Auth\SignIn\FailedToSignIn $e) {
+            return redirect('/login')->with('danger','Email or password is incorrect');
+        }
 
         if ($response) {
             $uid = $this->auth->getUserByEmail($email)->uid;
