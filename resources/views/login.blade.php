@@ -12,6 +12,7 @@
                     {{ session()->get('danger') }}
                 </div>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
         </div>
     @endif
     <div class="blur">
