@@ -6,7 +6,7 @@
 }
   /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: linear-gradient(0deg, rgba(168,237,234,1) 0%, rgba(254,214,227,1) 100%); 
 }
   /* Handle */
 ::-webkit-scrollbar-thumb {
@@ -17,8 +17,8 @@
     background: #555;
 }
 img{
-    width: 50%;
-    height: 50%;
+    width: 250px;
+    height: auto;
 }
 *
 {
