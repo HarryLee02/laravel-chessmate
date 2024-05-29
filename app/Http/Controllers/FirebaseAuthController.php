@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Kreait\Laravel\Firebase\Facades\Firebase;
 use Carbon\Carbon;
+use Exception;
+use Throwable;
 
 class FirebaseAuthController extends Controller
 {
@@ -43,15 +45,15 @@ class FirebaseAuthController extends Controller
         $password = $request->input('password');
         try {
             $response = $this->auth->signInWithEmailAndPassword($email, $password);
-        } catch (\Kreait\Firebase\Auth\SignIn\FailedToSignIn $e) {
-            return redirect('/login')->with('danger','Email or password is incorrect');
+        } catch (Throwable $e) {
+            return redirect('/login')->with('danger',$e->getMessage());
         }
 
         if ($response) {
             $uid = $this->auth->getUserByEmail($email)->uid;
             session(['uid' => $uid]);
             session()->put('logged_in',true);
-            return redirect('/home');
+            return redirect('/home')->with('success','Login successful');
         } else {
             return redirect('/login');
         }

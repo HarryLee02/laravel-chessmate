@@ -1,12 +1,12 @@
     @include('includes/header')
     @include('includes/boardheader')
     <title>ChessMate</title>
-    <link href="{{asset('css/index.css')}}" rel="stylesheet">
+    <link href="{{asset('css/home.css')}}" rel="stylesheet">
     <script src="{{asset('js/gameRandom.js')}}" type="module"></script>
 </head>
 <body>
     @include('includes/navbar')
-    @if(session()->get('success'))
+    @if(session()->has('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{ session()->get('success') }}
              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -24,8 +24,8 @@
                         <p>designed for learning and practicing <a style="font-weight: bold;color: black;">Chess.</a> </p>
                     </div>
                     <div class="btn-play d-flex">
-                        <button type="button" class="btn btn-success" style="font-size: xx-large;margin: 100px;background-color: aliceblue;border-radius: 50px;border-style:hidden;">
-                                <a class="fas fa-gamepad" style="text-decoration: none;"> <i class="custom-link" style="text-decoration: none; color:black;font-style: italic;" onclick="login()">Play!</i></a>
+                        <button type="button" class="btn btn-success" onclick="login()" style="font-size: xx-large;margin: 100px;background-color: aliceblue;border-radius: 50px;border-style:hidden;">
+                                <a class="fas fa-gamepad" style="text-decoration: none;"> <i class="custom-link" style="text-decoration: none; color:black;font-style: italic;">Play now!</i></a>
                                 
                         </button>
                     </div>
