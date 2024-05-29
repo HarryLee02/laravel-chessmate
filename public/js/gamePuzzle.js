@@ -2,8 +2,6 @@ import {Chess} from './chess.js'
 
 var board = null
 var game = new Chess()
-var $status = $('#status')
-var $fen = $('#fen')
 var $pgn = $('#pgn')
 
 function onDragStart (source, piece, position, orientation) {
@@ -32,12 +30,6 @@ function onDrop (source, target) {
   {
     return 'snapback'
   }
-  
-  
-
-  // illegal move
-  // if (move === null) 
-
   updateStatus()
 }
 
@@ -57,18 +49,14 @@ function updateStatus () {
   
   // checkmate?
   if (game.isCheckmate()) {
-    var audio = new Audio('./public/sound/move-check.mp3')
-    var audio1 = new Audio('./public/sound/game-end.mp3')
-    audio.play()
-    setTimeout(()=>{
-      audio1.play()
-    },700);
+    var audio1 = new Audio('../sound/game-end.mp3')
+    audio1.play()
     status = 'Game over, ' + moveColor + ' is in checkmate.'
   }
 
   // draw?
   else if (game.isDraw()) {
-    var audio = new Audio('./public/sound/game-end.mp3')
+    var audio = new Audio('../sound/game-end.mp3')
     audio.play()
     status = 'Game over, drawn position'
   }
@@ -79,14 +67,12 @@ function updateStatus () {
 
     // check?
     if (game.isCheck()) {
-      var audio = new Audio('./public/sound/move-check.mp3')
+      var audio = new Audio('../sound/move-check.mp3')
       audio.play()
       status += ', ' + moveColor + ' is in check'
     }
   }
 
-  console.log($status)
-  $fen.html(game.fen())
   
   $pgn.html(game.pgn())
 }

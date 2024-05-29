@@ -63,7 +63,9 @@ function onSnapEnd () {
 
 function updateStatus() {
   var moveColor = 'White'
-  
+if (game.turn() === 'b') {
+    moveColor = 'Black'
+  }
   
   // checkmate?
   if (game.isCheckmate()) {
@@ -97,9 +99,6 @@ function updateStatus() {
       var audio = new Audio('../sound/move-check.mp3')
       audio.play()
     }
-  }
-  if (game.turn() === 'b') {
-    moveColor = 'Black'
   }
   $('#pgn').val(game.pgn())
 }
@@ -141,7 +140,6 @@ $('#white').on('click', function () {
     onSnapEnd: onSnapEnd
   }
   board = Chessboard('myBoard', config)
-  board.orientation('white')
   game.reset()
   updateStatus()
 })

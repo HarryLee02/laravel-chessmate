@@ -84,24 +84,25 @@ function updateStatus() {
 var config = {
   draggable: true,
   position: 'start',
-  dropOffBoard: 'trash',
-  sparePieces: true
+  orientation:'white',
+  onDragStart: onDragStartWhite,
+  onDrop: onDrop,
+  onSnapEnd: onSnapEnd
 }
 board = Chessboard('myBoard', config)
 
-// updateStatus()
+updateStatus()
 
 $('#black').on('click', function () {
   var config = {
-    orientation:'black',
+    orientation: 'black',
     draggable: true,
-    position: board.position(),
+    position: 'start',
     onDragStart: onDragStartBlack,
     onDrop: onDrop,
     onSnapEnd: onSnapEnd
   }
   board = Chessboard('myBoard', config)
-  board.orientation('black')
   game.reset()
   makeRandomMove()
   updateStatus()
@@ -111,7 +112,7 @@ $('#white').on('click', function () {
   var config = {
     orientation:'white',
     draggable: true,
-    position: board.position(),
+    position: 'start',
     onDragStart: onDragStartWhite,
     onDrop: onDrop,
     onSnapEnd: onSnapEnd

@@ -12,8 +12,6 @@
                 <div class="center">
                     <br>
                     <div id="myBoard"style="width: 410px; margin: 0 auto;"></div>
-                    
-                    
                 </div>
             </div>
 
