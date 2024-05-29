@@ -6,6 +6,29 @@
 </head>
 <body>
     @include('includes.navbar')
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="center">
+                    <br>
+                    <div id="myBoard"style="width: 410px; margin: 0 auto;"></div>
+                    <br>
+                    <!-- <button id="restart" type="button" style="align-items: center;">Restart</button> -->
+                    <button id="black" type="button" class="btn btn-light">Play as Black</button>
+                    <button id="white" type="button" class="btn btn-light">Play as White</button>
+
+                    <button id="resign" type="button" class="btn btn-danger">Resign</button>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <textarea id="pgn" readonly>
+                
+                </textarea>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
     <div class="modal fade" id="Modal" style="text-align: center;"> 
         <div class="modal-dialog modal-dialog-centered"> 
             <div class="modal-content" > 
@@ -27,29 +50,6 @@
             </div> 
         </div> 
 	</div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="center">
-                    <br>
-                    <div id="myBoard"style="width: 410px; margin: 0 auto;"></div>
-                    <br>
-                    <!-- <button id="restart" type="button" style="align-items: center;">Restart</button> -->
-                    <button id="black" type="button" class="btn btn-light">Play as Black</button>
-                    <button id="white" type="button" class="btn btn-light">Play as White</button>
-
-                    <button id="resign" type="button" class="btn btn-danger">Resign</button>
-                    <button id="restart" type="button" class="btn btn-light">Restart</button>
-                </div>
-            </div>
-
-            <div class="col-md-5">
-                <textarea id="pgn" readonly>
-                
-                </textarea>
-            </div>
-        </div>
-    </div>
 </body>
 </html>
 <script>

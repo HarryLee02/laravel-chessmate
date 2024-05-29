@@ -29,7 +29,7 @@ function makeRandomMove () {
 
   var randomIdx = Math.floor(Math.random() * possibleMoves.length)
   game.move(possibleMoves[randomIdx])
-  var audio = new Audio('public/sound/move-opponent.mp3')
+  var audio = new Audio('../sound/move-opponent.mp3')
   audio.play()
   $('#pgn').val(game.pgn())
   board.position(game.fen())
@@ -43,14 +43,14 @@ function onDrop (source, target) {
     to: target,
     promotion: 'q' // NOTE: always promote to a queen for example simplicity
   })
-  var audio = new Audio('public/sound/move-self.mp3')
+  var audio = new Audio('../sound/move-self.mp3')
   audio.play()
   }
   catch(err)
   {
       return 'snapback'
   }
-  window.setTimeout(makeRandomMove, 1000)
+  window.setTimeout(makeRandomMove, 700)
 
   updateStatus()
 }
@@ -67,12 +67,8 @@ function updateStatus() {
   
   // checkmate?
   if (game.isCheckmate()) {
-    var audio = new Audio('public/sound/move-check.mp3')
-    var audio1 = new Audio('public/sound/game-end.mp3')
-    audio.play()
-    setTimeout(()=>{
-      audio1.play()
-    },700);
+    var audio1 = new Audio('../sound/game-end.mp3')
+    audio1.play()
     $('.modal_placeholder').html(moveColor+' won!<br><span>Checkmate</span>')
     var modal = new bootstrap.Modal(document.getElementById('Modal'))
     modal.show()
@@ -80,7 +76,7 @@ function updateStatus() {
 
   // draw?
   else if (game.isDraw()) {
-    var audio = new Audio('public/sound/game-end.mp3')
+    var audio = new Audio('../sound/game-end.mp3')
     audio.play()
     if (game.isStalemate()) {
       $('.modal_placeholder').html('Draw!<br><span>Stalemate!</span>')
@@ -98,7 +94,7 @@ function updateStatus() {
 
     // check?
     if (game.isCheck()) {
-      var audio = new Audio('public/sound/move-check.mp3')
+      var audio = new Audio('../sound/move-check.mp3')
       audio.play()
     }
   }
@@ -107,9 +103,6 @@ function updateStatus() {
   }
   $('#pgn').val(game.pgn())
 }
-
-
-var current_piece_theme
 
 var config = {
   draggable: true,
@@ -132,6 +125,7 @@ $('#black').on('click', function () {
     onSnapEnd: onSnapEnd
   }
   board = Chessboard('myBoard', config)
+  board.orientation('black')
   game.reset()
   makeRandomMove()
   updateStatus()
@@ -146,12 +140,13 @@ $('#white').on('click', function () {
     onSnapEnd: onSnapEnd
   }
   board = Chessboard('myBoard', config)
+  board.orientation('white')
   game.reset()
   updateStatus()
 })
 
 $('#resign').on('click', function () {
-  var audio = new Audio('public/sound/game-end.mp3')
+  var audio = new Audio('../sound/game-end.mp3')
   audio.play()
   $('.modal_placeholder').html('You lost!<br><span>Resigned</span>')
   var modal = new bootstrap.Modal(document.getElementById('Modal'))
@@ -167,17 +162,3 @@ $('#resign').on('click', function () {
   game.reset()
   updateStatus()
 })
-
-$('#restart').on('click', function () {
-  var config = {
-    draggable: true,
-    position: 'start',
-    onDragStart: onDragStartWhite,
-    onDrop: onDrop,
-    onSnapEnd: onSnapEnd
-  }
-  board = Chessboard('myBoard', config)
-  game.reset()
-  updateStatus()
-}
-)

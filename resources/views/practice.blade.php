@@ -13,11 +13,12 @@
                     <br>
                     <div id="myBoard"style="width: 410px; margin: 0 auto;"></div>
                     <br>
-                    <button id="changeTheme" type="button" style="align-items: center;">Random Theme</button>
-                    <!-- <button id="restart" type="button" style="align-items: center;">Restart</button> -->
-                    <button id="clear" type="button" style="align-items: center;">Clear board</button>
-                    <button id="flip" type="button" style="align-items: center;">Flip board</button>
-                    <button id="start" type="button" style="align-items: center;">Start this position</button>
+                    <button id="white" type="button" class="btn btn-light">Start this position as White</button>
+                    <button id="black" type="button" class="btn btn-light">Start this position as Black</button>
+
+                    <button id="clear" type="button" class="btn btn-light">Clear board</button>
+                    <button id="flip" type="button" class="btn btn-light">Flip board</button>
+                    <button id="resign" type="button" class="btn btn-danger">Start this position</button>
                 </div>
             </div>
 
@@ -28,6 +29,28 @@
             </div>
         </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="Modal" style="text-align: center;"> 
+        <div class="modal-dialog modal-dialog-centered"> 
+            <div class="modal-content" > 
+                <div class="modal-header text-center" style="background-color: lightgray;"> 
+                    <div class="modal-title w-100"> 
+                        <span class="modal_placeholder">Modal</span> 
+                    </div> 
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"> 
+                        
+                    </button> 
+                </div> 
+                <div class="modal-body"> 
+                    <button type="button" class="btn btn-success" onclick="window.location.href='/home';">Return home</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div> 
+        </div> 
+	</div>
 </body>
 </html>
 <script>
