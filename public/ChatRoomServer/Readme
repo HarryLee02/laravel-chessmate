@@ -1,0 +1,11 @@
+1. Create a new directory for your project and navigate to it using the command line.
+mkdir real-time-chat-app
+cd real-time-chat-app
+2. Initialize a new Node.js project: Run the following command in the project directory to create a new package.json file.
+npm init -y
+3.Install the required dependencies: Install Socket.IO packages by running the following command.
+npm install express socket.io
+4.Create code
+index.js, index.html, style.css
+5. Run server
+node index.js

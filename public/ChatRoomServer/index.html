@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebSocket Chat</title>
+    <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Ngăn việc kéo ngang */
+}
+#container {
+  width: 400px; /* Đặt chiều rộng cố định */
+  height: 500px;
+  margin: 108px auto;
+  padding: 20px;
+}
+
+    h1 {
+      text-align: center;
+    }
+    #messages {
+      height: 464px;
+      overflow-y: scroll;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+      outline: 2px solid #f00; /* Đổi màu và kích thước viền ở đây */
+    }
+    .input-group {
+      margin-bottom: 10px;
+      
+    }
+    .input-group input[type="text"] 
+    {
+      width: 150px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .input-group button 
+    {
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .input-group button:hover {
+      background-color: #0056b3;
+    }
+    .input-group button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    .chat-input {
+      display: flex;
+      align-items: center;
+    }
+    .chat-input input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+    .chat-input button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .chat-input button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="input-group">
+        <span>RoomID</span>
+        <input type="text" id="roomId" placeholder="Enter room ID" />
+      </div>
+      <div class="input-group">
+        <span>UserID</span>
+        <input type="text" id="userId" placeholder="Enter user ID" />
+
+        <button onclick="joinRoom()" id="joinRoomBtn">Join Room</button>
+      </div>
+      <div id="messages"></div>
+      <div class="chat-input">
+        <input type="text" id="message" placeholder="Enter message" />
+        <button onclick="sendMessage()" id="sendMessageBtn">Send</button>
+      </div>
+    </div>
+  </body>
+</html>
