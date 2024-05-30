@@ -1,6 +1,9 @@
 import { onDrop2 } from '../js/gameOnline.js';
 import { restartgame } from '../js/gameOnline.js';
-const ws = new WebSocket("ws://localhost:6789");
+
+const wsUrl = window.location.protocol === 'https:' ? 'wss' : 'ws';
+const port = process.env.PORT || 3000; // Use the Heroku-assigned port or a default (e.g., 3000)
+const ws = new WebSocket(`${wsUrl}://${window.location.hostname}:${port}`);
 
 ws.onopen = () => {
   console.log("Connected to WebSocket server");

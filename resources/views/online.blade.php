@@ -9,11 +9,16 @@
     <div class="container">
         <div class="row">
             <div class="col-6">
+                <div id="clock-countdown">
+                    <div id="clock"><span id="timer1">10:00</span></div>
+                </div>
                 <div class="center">
                     <div id="myBoard"style="width: 470px; margin: 0 auto; "></div>
                     <br>
-                    <button id="changeTheme" type="button" style="align-items: center;">Random Theme</button>
-                    <!--<button id="restart" type="button" style="align-items: center;">Restart</button> -->
+                    <button id="resign" type="button" class="btn btn-danger">Resign</button>
+                </div>
+                <div id="clock-countdown2">
+                    <div id="clock"><span id="timer2">10:00</span></div>
                 </div>
             </div>
 

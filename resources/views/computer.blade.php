@@ -1,7 +1,7 @@
 @include('includes/header')
     @include('includes/boardheader')
     <title>Practice</title>
-    <link href="{{asset('css/practice.css')}}" rel="stylesheet">
+    <link href="{{asset('css/online.css')}}" rel="stylesheet">
     <script src="{{asset('js/gameComputer.js')}}" type="module"></script>
 </head>
 <body>
@@ -13,7 +13,6 @@
                     <br>
                     <div id="myBoard"style="width: 410px; margin: 0 auto;"></div>
                     <br>
-                    <!-- <button id="restart" type="button" style="align-items: center;">Restart</button> -->
                     <button id="black" type="button" class="btn btn-light">Play as Black</button>
                     <button id="white" type="button" class="btn btn-light">Play as White</button>
 
