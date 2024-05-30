@@ -1,4 +1,4 @@
-import { createServer } from "http";
+import { createServer } from "https";
 import { parse } from "url";
 import { WebSocket, WebSocketServer } from "ws";
 

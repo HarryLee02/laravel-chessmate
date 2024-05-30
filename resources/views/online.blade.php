@@ -1,7 +1,7 @@
     @include('includes/header')
     @include('includes/boardheader')
     <title>Online</title>
-    <link href="{{asset('css/practice.css')}}" rel="stylesheet">
+    <link href="{{asset('css/online.css')}}" rel="stylesheet">
     <script src="{{asset('js/gameOnline.js')}}" type="module"></script>
 </head>
 <body>
