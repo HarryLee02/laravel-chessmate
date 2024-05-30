@@ -1,2 +1,2 @@
 web: heroku-php-apache2 public/
-web: node public/ChatRoomServer
+node: node public/ChatRoomServer
