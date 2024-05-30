@@ -36,8 +36,8 @@
                 };
                 xhr.send();
             </script>
-            <script src="./ChatRoomServer/chat.js" type="module" ></script>
-            <script src="./ChatRoomServer/index.js" type="module"></script>
+            <script src="{{asset('ChatRoomServer/chat.js')}}" type="module" ></script>
+            <script src="{{asset('ChatRoomServer/index.js')}}" type="module"></script>
 
         </div>
     </div>
