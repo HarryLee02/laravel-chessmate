@@ -142,6 +142,6 @@ server.on("upgrade", function upgrade(request, socket, head) {
   });
 });
 
-server.listen(6789, () => {
-  console.log("application is listening on the port 6789");
+server.listen(3000, () => {
+  console.log("application is listening on the port 3000");
 });
