@@ -1,2 +1,2 @@
 web: heroku-php-apache2 public/
-node: node public/ChatRoomServer/index.js
+worker: node public/ChatRoomServer/index.js
