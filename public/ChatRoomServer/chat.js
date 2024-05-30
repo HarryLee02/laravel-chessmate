@@ -1,9 +1,9 @@
 import { onDrop2 } from '../js/gameOnline.js';
 import { restartgame } from '../js/gameOnline.js';
 
-const wsUrl = window.location.protocol === 'https:' ? 'wss' : 'ws';
+
 const port = 3000;
-const ws = new WebSocket(`${wsUrl}://${window.location.hostname}:${port}`);
+const ws = new WebSocket(`ws://${window.location.hostname}:${port}`);
 
 ws.onopen = () => {
   console.log("Connected to WebSocket server");
