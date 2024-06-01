@@ -5,75 +5,171 @@
 <body>
 @include('includes.navbar')
 <div class="mainbody"> 
-        <!--Search bar-->
+    <!--Search bar-->
+        
+        <div class="wrapper">
             
-            <div class="wrapper">
-                
-                <div class="label">Find your?</div>
-                    <div class="searchBar">
-                        <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="What items do you want ? . . ." value="" />
-                        <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
-                        <svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#666666" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
-                        </svg>
-                        </button>
+            <div class="label">Find your?</div>
+                <div class="searchBar">
+                    <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="What items do you want ? . . ." value="" />
+                    <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
+                    <svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#666666" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                    </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="panel">
+                <h3 style="font-family:serif;">CheseMate Shop</h3>
+                <div class="cart"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+        <div class="nav-move">
+            <a href="#">Board</a>
+            <a href="#">Stickers</a>
+            <a href="#">Calendar</a>
+            <a href="#">Posters</a>
+            <a href="#">Figures</a>
+            <div class="animation start-home"></div>
+            </div>
+
+        <div class="container">
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="col-md-12 stuff">
+                        <div class="upper">
+                            <img  src="" width="120" height="120">
+                        </div>
+                        <div class="downer">
+                            <p>Price: $10</p>
+                            <button type="button" class="btn add-to-cart">Add to cart</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 stuff">
+                        <div class="upper">
+                            <img  src="" width="120" height="120">
+                        </div>
+                        <div class="downer">
+                            <p>Price: $10</p>
+                            <button type="button" class="btn">Add to cart</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 stuff">
+                        <div class="upper">
+                            <img  src="" width="120" height="120">
+                        </div>
+                        <div class="downer">
+                            <p>Price: $10</p>
+                            <button type="button" class="btn">Add to cart</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 stuff">
+                        <div class="upper">
+                            <img  src="" width="120" height="120">
+                        </div>
+                        <div class="downer">
+                            <p>Price: $10</p>
+                            <button type="button" class="btn">Add to cart</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 stuff">
+                        <div class="upper">
+                            <img  src="" width="120" height="120">
+                        </div>
+                        <div class="downer">
+                            <p>Price: $10</p>
+                            <button type="button" class="btn">Add to cart</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 stuff">
+                        <div class="upper">
+                            <img  src="" width="120" height="120">
+                        </div>
+                        <div class="downer">
+                            <p>Price: $10</p>
+                            <button type="button" class="btn">Add to cart</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 stuff">
+                        <div class="upper">
+                            <img  src="" width="120" height="120">
+                        </div>
+                        <div class="downer">
+                            <p>Price: $10</p>
+                            <button type="button" class="btn">Add to cart</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 stuff">
+                        <div class="upper">
+                            <img  src="" width="120" height="120">
+                        </div>
+                        <div class="downer">
+                            <p>Price: $10</p>
+                            <button type="button" class="btn">Add to cart</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 stuff">
+                        <div class="upper">
+                            <img  src="" width="120" height="120">
+                        </div>
+                        <div class="downer">
+                            <p>Price: $10</p>
+                            <button type="button" class="btn">Add to cart</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 stuff">
+                        <div class="upper">
+                            <img  src="" width="120" height="120">
+                        </div>
+                        <div class="downer">
+                            <p>Price: $10</p>
+                            <button type="button" class="btn">Add to cart</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 stuff">
+                        <div class="upper">
+                            <img  src="" width="120" height="120">
+                        </div>
+                        <div class="downer">
+                            <p>Price: $10</p>
+                            <button type="button" class="btn">Add to cart</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 stuff">
+                        <div class="upper">
+                            <img  src="" width="120" height="120">
+                        </div>
+                        <div class="downer">
+                            <p>Price: $10</p>
+                            <button type="button" class="btn">Add to cart</button>
+                        </div>
+                        </div>
                     </div>
                 </div>
-                <div class="panel">
-                    <h3 style="font-family:serif;">CheseMate Shop</h3>
-                    <div class="shopping">
-                    <div class="cart"><i class="fas fa-shopping-cart"></i></div>
-                </div>
-                </div>
-                
-                <div class="card">
-                    <h1>Card</h1>
-                    <ul class="listCard">
-                    </ul>
-                    <div class="checkOut">
-                        <div class="total">Total:0</div>
-                        <div class="closeShopping">Close</div>
-                    </div>
-                </div>
-                <div class="nav-move">
-                    <a href="#" onclick="loadContent('container_Board')">Board</a>
-                    <a href="#" onclick="loadContent('container_Stickers')">Stickers</a>
-                    <a href="#" onclick="loadContent('container_Figures')">Figures</a>
-                    <a href="#" onclick="loadContent('container_Calendar')">Calendar</a>
-                    <a href="#" onclick="loadContent('container_Posters')">Posters</a>
-                    <div class="animation start-home"></div>
-                </div>
-                
-                <div id="container_Board" class="container">
-                    <div class="list"></div>
-                </div>
-                
-                <div id="container_Stickers" class="container">
-                    <div class="list"></div>
-                </div>
-                
-                <div id="container_Calendar" class="container">
-                    <div class="list"></div>
-                </div>
-                
-                <div id="container_Posters" class="container">
-                    <div class="list"></div>
-                </div>
-                
-                <div id="container_Figures" class="container">
-                    <div class="x"></div>
-                </div>
-                
-                <script>
-                    function loadContent(containerId) {
-                        var container = document.getElementById(containerId);
-                        var content = container.querySelector('.list1').innerHTML;
-                        document.querySelector('.container.active').classList.remove('active');
-                        container.classList.add('active');
-                        container.querySelector('.list').innerHTML = content;
-                    }
-                </script>
-                <script src="{{asset('js/datashop.js')}}"></script>
-</div>
+            </div>
+        </div>
+    </div>
 </html>
 <script>
 // Srcipt Navbar
@@ -117,7 +213,7 @@
      });
 
      window.addEventListener('resize', function () {
-         if (window.innerWidth > 1000) {
+         if (window.innerWidth > 400) {
              navItems.forEach(item => item.style.display = 'block');
              loginBtn.style.display = 'block';
          } else {

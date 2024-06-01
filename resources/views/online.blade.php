@@ -22,7 +22,7 @@
                     <button id="resign" type="button" class="btn btn-danger">Resign</button>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <textarea id="pgn" readonly> </textarea>
             </div>
         </div>
