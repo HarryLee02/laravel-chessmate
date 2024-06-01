@@ -7,16 +7,7 @@
     
 }
 /* styling nav */
-nav{
-    height: 5rem;
-    width: 100%;
-    background-color:#1451B8;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-    display: flex;
-    position: fixed;
-    z-index: 10;
 
-}
 .nav-brand
 {
     top: 10px;
@@ -96,7 +87,7 @@ nav{
     display: none;
 }
 /* Body Post */
-body
+.mainbody
 {
     background: linear-gradient(90deg, rgba(168,237,234,1) 0%, rgba(254,214,227,1) 100%);
     overflow-x: hidden;
