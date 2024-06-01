@@ -141,7 +141,7 @@
         const link = 'https://api.vietqr.io/image/970436-1015563285-Q3n5IT7.jpg?accountName=LE%20NGOC%20HIEU&amount=' + price;
         var modal = new bootstrap.Modal(document.getElementById('Modal'))
         
-        $('.QR_placeholder').html('<img src="' + link + '" alt="QR thanh toán">')
+        $('.QR_placeholder').html('<img src="' + link + '" alt="QR thanh toán" style="width:200px, height:auto">')
         modal.show()
     });
   });
