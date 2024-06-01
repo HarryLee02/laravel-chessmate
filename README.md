@@ -4,6 +4,8 @@
 ## About ChessMate
 
 ChessMate is a web application built using [Laravel framework](https://laravel.com/docs/11.x/) and [Firebase](https://firebase.google.com/) Realtime Database.
+Live example [here](https://chessmate.games/)
+Apache Webserver setup tutorial: https://youtu.be/gjzptnxvX6Q?si=OmutSIZUG0guNkZ7
 ## Working features
 - Play with computer
 - QR code for shop items
@@ -52,5 +54,6 @@ Then run `php artisan serve` and access http://127.0.0.1:8080
 - Playing online (Realtime with Laravel is **hard**)
 - Admin page
 - Post blogs (can post but not showing yet)
+- More computers (Stockfish, Komodo, .etc)
 ## Side notes
 All of the frontend is stored in [this](https://github.com/HarryLee02/ChessMate_Frontend).
