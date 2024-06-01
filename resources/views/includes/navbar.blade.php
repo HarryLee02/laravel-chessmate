@@ -1,5 +1,5 @@
 <nav>
-    <!-- <link href="{{asset('css/nav.css')}}" rel="stylesheet" type="text/css"> -->
+    <link href="{{asset('css/nav.css')}}" rel="stylesheet" type="text/css">
     <!--Logo-->
     <div class="logo">
         <img src="{{asset('img/logo.webp')}}" alt="Logo Image"> 
