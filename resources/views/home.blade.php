@@ -20,7 +20,7 @@
                         <h1 class="chessmate-heading" style="color:black; font-weight: bold;font-size: xxx-large;"> ChessMate </h1>
                         <br/>
                         <div class="para" style="font-size: 20px;">
-                            <p>A brand new, free and friendly website for learning and practicing <a style="font-weight: bold;color: black;">Chess.</a> </p>
+                            <p>A brand new, free and friendly website for learning and practicing <strong style="color: black;">Chess.</strong> </p>
                         </div>
                         <div class="btn-play d-flex">
                             <button type="button" class="btn btn-success" style="font-size: xx-large;margin: 100px;background-color: aliceblue;border-radius: 50px;border-style:hidden;">

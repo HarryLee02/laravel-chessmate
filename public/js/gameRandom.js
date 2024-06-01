@@ -2,9 +2,6 @@ import {Chess} from './chess.js'
 
 var board = null
 var game = new Chess()
-var $status = $('#status')
-var $fen = $('#fen')
-var $pgn = $('#pgn')
 
 function makeRandomMove () {
     var possibleMoves = game.moves()
@@ -28,8 +25,6 @@ function makeRandomMove () {
 }
 
 function updateStatus () {
-    var status = ''
-  
     var moveColor = 'White'
     if (game.turn() === 'b') {
       moveColor = 'Black'
@@ -37,32 +32,22 @@ function updateStatus () {
     
     // checkmate?
     if (game.isCheckmate()) {
-      var audio = new Audio('../sound/move-check.mp3')
       var audio1 = new Audio('../sound/game-end.mp3')
-      audio.play()
-      setTimeout(()=>{
-        audio1.play()
-      },700);
-      status = 'Game over, ' + moveColor + ' is in checkmate.'
+      audio1.play()
     }
   
     // draw?
     else if (game.isDraw()) {
       var audio = new Audio('../sound/game-end.mp3')
       audio.play()
-      status = 'Game over, drawn position'
     }
-  
     // game still on
     else {
-      status = moveColor + ' to move'
-  
       // check?
-        if (game.isCheck()) {
-            var audio = new Audio('../sound/move-check.mp3')
-            audio.play()
-            status += ', ' + moveColor + ' is in check'
-        }
+      if (game.isCheck()) {
+          var audio = new Audio('../sound/move-check.mp3')
+          audio.play()
+      }
     }
 }
 
