@@ -37,7 +37,7 @@
                     <div class="col-md-4">
                         <div class="col-md-12 stuff">
                             <div class="upper">
-                                <img  src="{{}}" width="120" height="120">
+                                <img  src="{{$item['link']}}" width="120" height="120">
                             </div>
                             <div class="downer">
                                 <p>{{$item['name']}}</p>
