@@ -1,5 +1,5 @@
 <nav>
-    <link href="{{asset('css/nav.css')}}" rel="stylesheet" type="text/css">
+    <!-- <link href="{{asset('css/nav.css')}}" rel="stylesheet" type="text/css"> -->
     <!--Logo-->
     <div class="logo">
         <img src="{{asset('img/logo.png')}}" alt="Logo Image"> 
@@ -35,7 +35,5 @@
         @else
             <li><button class="login-btn" href="/login" onclick="login()">Login</button></li>
         @endif
-
-
     </ul>
 </nav>
