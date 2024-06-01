@@ -19,7 +19,10 @@
                     <button id="resign" type="button" class="btn btn-danger">Resign</button>
                 </div>
             </div>
-            <div class="col-md-5">
+            <div id="clock-countdown2">
+                <div id="clock2"><span id="timer2">10:00</span></div>
+            </div>
+            <div class="col-md-4">
                 <textarea id="pgn" readonly> </textarea>
             </div>
         </div>
