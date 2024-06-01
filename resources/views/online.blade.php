@@ -2,7 +2,7 @@
     @include('includes/boardheader')
     <title>Online</title>
     <link href="{{asset('css/online.css')}}" rel="stylesheet">
-    <script src="{{asset('js/gameOnline.js')}}" type="module"></script>
+    <!-- <script src="{{asset('js/gameOnline.js')}}" type="module"></script> -->
 </head>
 <body>
     @include('includes.navbar')
