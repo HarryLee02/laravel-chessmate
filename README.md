@@ -46,7 +46,7 @@ FIREBASE_DATABASE_URL= <your_db_url>
 Then run `php artisan serve` and access http://127.0.0.1:8080
 
 ## Google Page Speed
-![image](https://hackmd.io/_uploads/SynUJCdN0.png)
+![image](https://ibb.co/FqbDzmG)
 
 ## Underdevelop features
 - Playing online (Realtime with Laravel is **hard**)
