@@ -7,6 +7,10 @@
 <body>
     @include('includes.navbar')
     <div class="container">
+        
+        <div id="clock-countdown">
+            <div id="clock"><span id="timer1">10:00</span></div>
+        </div>
         <div class="row">
             <div class="col-md-3">
                 <div class="center">
