@@ -31,12 +31,12 @@
             $mail->SMTPSecure = PHPMailer\PHPMailer\PHPMailer::ENCRYPTION_SMTPS;
         
         
-            $mail->Username   = 'team.chessmate@gmail.com';
-            $mail->Password   = 'jkpw wfzn yeld yeld';
+            $mail->Username   = ; // Null
+            $mail->Password   = ;//Null
         
             //Recipients
             $mail->setFrom('team.chessmate@gmail.com', 'ChessMate');
-            $mail->addAddress('ngochieu0211.study@gmail.com','Harry Lee');     // Add a recipient
+            $mail->addAddress(// Null,// Null);     // Add a recipient
             $mail->isHTML(true);                                  // Set email format to HTML
             $mail->Subject = 'Test verified email';
             $mail->Body    = $email_template;
