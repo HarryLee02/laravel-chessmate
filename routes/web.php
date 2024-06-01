@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PusherController;
 use App\Http\Controllers\FirebaseController;
 use App\Http\Controllers\FirebaseAuthController;
 use App\Http\Middleware\PreventDirectAccess;
@@ -8,6 +9,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
+Route::post('/broadcast', [PusherController::class, 'broadcast']);
+Route::post('/receive', [PusherController::class, 'receive']);
+
 
 
 Route::middleware(['logged_in'])->group(function () {

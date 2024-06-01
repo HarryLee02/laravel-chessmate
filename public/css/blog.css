@@ -101,13 +101,12 @@ nav{
     background: linear-gradient(90deg, rgba(168,237,234,1) 0%, rgba(254,214,227,1) 100%);
     overflow-x: hidden;
     overflow-y: auto;
-    height: 100vh;
 }
 .header-post
 {
     background-color:transparent;
     padding: 20px;
-    margin-top: 18vh;
+    margin-top:20vh;
     text-align: center;
 }
 .header-post h1{
@@ -127,7 +126,7 @@ nav{
     width: 80%;
     padding:10px;
     font-size: 16px;
-    border: 5px solid #ddd;
+    border: 1px solid #ddd;
     margin-right: 10px;
     font-family: monospace;
 }
@@ -145,9 +144,6 @@ nav{
     display: flex;
     justify-content: center;
     padding:20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .post
 {
@@ -159,10 +155,11 @@ nav{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .post img{
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     float:left;
+    margin-left: 20px;
 }
 .onPost
 {
@@ -194,18 +191,15 @@ nav{
     border: none;
     cursor: pointer;
 }
-.like-button.liked
-{
-    background-color: #4362d4;
-}
 .post-likes
 {
     margin-top: 20px;
+
 }
 .post-likes p{
-    font-size: 14px;
-    color: #999;
-    margin-left:0;
+        font-size: 14px;
+        color: #999;
+        margin-left:0;
 }
 .post-comments
 {
@@ -220,7 +214,7 @@ nav{
     color:#fff;
     padding:5px 10px;
 }
-@media screen and (max-width:1000px){
+@media only screen and (max-width: 400px) and (orientation: portrait){
     .hamburger{
         display: block;
         position: absolute;
@@ -257,5 +251,26 @@ nav{
         margin-left: 0vw;
         font-size:1rem;
         cursor: pointer;
+    }
+    .header-post h1 {
+        font-size: 30px!important;
+        padding-bottom: 40px;
+        width: 22rem!important;
+    }
+    .post img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        float: left;
+        margin-left: -10px;
+    }
+    .post-form textarea {
+        height: 100px!important;
+        width: 80%;
+        padding: 10px;
+        font-size: 12px!important;
+        border: 1px solid #ddd;
+        margin-right: 10px;
+        font-family: monospace;
     }
 }

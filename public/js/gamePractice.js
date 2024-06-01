@@ -25,10 +25,11 @@ function onDrop (source, target) {
   // see if the move is legal
   try{
     var move = game.move({
-    from: source,
-    to: target,
-    promotion: 'q' // NOTE: always promote to a queen for example simplicity
-  })
+      from: source,
+      to: target,
+      promotion: 'q' // NOTE: always promote to a queen for example simplicity
+    })
+    console.log(move)
     var audio = new Audio('../sound/move-self.mp3')
     audio.play()
   }

@@ -103,7 +103,7 @@ nav{
     display: none;
 }
 /* Body */
-.mainbody, body
+.mainbody
 {
     background: linear-gradient(90deg, rgba(168,237,234,1) 0%, rgba(254,214,227,1) 100%);
     overflow-x: hidden;
@@ -174,13 +174,14 @@ p.heading-form
 .container
 {
   margin:20em auto 0;
+  width: fit-content;
   border: 2px solid white;
   border-radius: 3%;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   padding: 30px;
   display: inline-block;
   position: relative;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
@@ -218,7 +219,12 @@ p.heading-form
   right: 1em;
   transform: translateY(-50%);
 }
-
+/* Footer */
+footer
+{
+    max-height:800px;
+    background-color:#131418;
+}
 .form-container
 { 
   width: 60%;
@@ -264,7 +270,7 @@ p.heading-form
     color: #777;
     margin-top: 10px;
 }
-@media screen and (max-width:1000px){
+@media only screen and (max-width: 400px) and (orientation: portrait){
     .hamburger{
         display: block;
         position: absolute;
@@ -318,7 +324,7 @@ p.heading-form
       padding: 30px;
       display: inline-block;
       position: absolute;
-      top: 50%; 
+      top: calc(100% + 100px); 
       left:50%;
       transform: translate(-50%,-50%);
       background: white;

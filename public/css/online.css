@@ -102,7 +102,7 @@ body
     overflow-x: hidden;
     overflow-y: auto;
 }
-.container
+.Container
 {
     position: static;
 }
@@ -110,39 +110,37 @@ body
     margin-inline: auto;
     width: 150px;
     height: 50px;
-    border: 0.2rem solid grey;
+    border: 0.2rem solid black;
     border-radius: 9px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 1em;
-    color: black;
-    background-color: #fff;
+    color: white;
     margin-top: 7rem;
     margin-left: -6rem;
-}
-
+  }
+  
 #clock {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+font-size: 1.5em;
+margin-bottom: 10px;
 }
 #clock-countdown2 {
     margin-inline: auto;
     width: 150px;
     height: 50px;
-    border: 0.2rem solid gray;
+    border: 0.2rem solid black;
     border-radius: 9px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 1em;
-    color: black;
-    background-color: #fff;
+    color: white;
     margin-top: 22em;
     margin-left: -6rem;
-}
+  }
 .center
 {
     margin: 0;

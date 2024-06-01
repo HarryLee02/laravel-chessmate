@@ -37,7 +37,6 @@ body{
     width: 100%;
     position: relative;
     z-index: -1;
-    overflow: hidden;
 }
 .container
 {   
@@ -85,12 +84,7 @@ form .input-box span.user-details
     font-weight: 400;
     margin-bottom: 5px;
 }
-
-#country>option
-{
-    width: 100px;
-}
-.user-details .input-box input,select{
+.user-details .input-box input{
     height: 45px;
     width: 100%;
     outline: none;
@@ -169,7 +163,7 @@ form .button input:hover
 {
     background:  linear-gradient(90deg, rgba(168,237,234,1) 0%, rgba(254,214,227,1) 100%);
 }
-@media(max-width: 584px)
+@media only screen and (max-width: 375px) and (orientation: portrait)
 {
     .container
     {
@@ -191,11 +185,39 @@ form .button input:hover
     {
         width: 5px;
     }
-}
-@media(max-width: 459px)
-{
-    .container.content.category
-    {
-        flex-direction: column;
+    form .category {
+        display: flex;
+        width: 100%;
+        margin: 14px 0;
+        justify-content: space-between;
+        font-size: x-small;
+    }
+    .title::before {
+        width: 20rem;
+    }
+    .container {
+        margin-top: 0px;
+    }
+    .blur .container .checbox label {
+        font-size:14px!important;
+    }
+    form input[type="checkbox"] {
+        width: 18px;
+        height: 15px;
+    }
+    .back-to-login-button {
+        display: inline-block;
+        padding: 5px 10px!important;
+        text-decoration: none;
+        background: linear-gradient(90deg, rgba(168, 237, 234, 1) 0%, rgba(254, 214, 227, 1) 100%);
+        border-radius: 5px;
+        position: absolute;
+        z-index: 10;
+        left: 0!important;
+        border: none;
+    }
+    form .button {
+        height: 35px;
+        margin:0;
     }
 }

@@ -1,21 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
-
-/* Scroll bar */
-::-webkit-scrollbar {
-    width: 10px;
-}
-  /* Track */
-::-webkit-scrollbar-track {
-    background: linear-gradient(0deg, rgba(168,237,234,1) 0%, rgba(254,214,227,1) 100%); 
-}
-  /* Handle */
-::-webkit-scrollbar-thumb {
-    background: #888; 
-}
-  /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
 *
 {
     margin: 0;
@@ -172,7 +155,7 @@ footer
     width: 100%; 
 }
 /* Mobile */
-@media screen and (max-width:800px){
+@media only screen and (max-width: 400px) and (orientation: portrait){
     .hamburger{
         display: block;
         position: absolute;
@@ -181,6 +164,7 @@ footer
         right: 30px;
         font-size: 2rem;
         cursor: pointer;
+        padding-top:1rem;
     }
     .nav-link.show 
     {
@@ -196,7 +180,6 @@ footer
         padding: 0;
         overflow-y: auto; 
         justify-content: flex-start;
-       
     }
     .nav-link li a {
         margin-bottom: 10px;
@@ -221,14 +204,83 @@ footer
             width: 100%;
         }
     }
+    .container1 {
+        padding-top: 10rem;
+        padding:0;
+    }
+    .chessmate-heading
+    {
+        font-size: xx-large!important;
+        text-align: center;
+    }
+    .para
+    {
+        font-size: medium!important;
+        padding: 0 !important;
+        text-align: center;
+    }
+    .btn-play button {
+        font-size: larger!important;
+        margin: 1rem 0 1rem 9rem !important;
+        background-color: aliceblue;
+        border-radius: 50px;
+        border-style: hidden;
+    }
+    .w-100 {
+        width: 95% !important;
+        justify-content: center;
+        padding-left: 1rem;
+    }
+    .about-heading
+    {
+        font-size: xx-large!important;
+        text-align: center!important;
+        width: 10rem;
+    }
+    .paragraph
+    {
+        font-size: 15px!important;
+        width: 10rem!important;
+    }
+    .paragraph1
+    {
+        font-size: 14px;
+        margin:0 -3rem 2rem ;
+        width:18rem;
+    }
+    .img-chess .img-about
+    {
+        width: 142% !important;
+        justify-content: center;
+        margin-left: -3rem;
+    }
+    .morething-heading
+    {
+        font-size: xx-large!important;
+    }
     .container3 .para1 p
     {
-        max-width: 623px; 
-        font-size: 18px;
-        line-height: 1.6; 
-        margin-bottom: 15px; 
+        max-width: 25rem;
+        font-size: 15px;
+        line-height: 1.3;
         text-align: center;
-        margin-left:10vh;    
         animation: slidein 3s forwards;
+    }
+    .profile-photo .row {
+        flex-wrap: nowrap;
+    }
+
+    .profile-photo .col-md-2 {
+        flex: 0 0 20%;
+        max-width: 20%;
+        margin-bottom: 0;
+    }
+
+    .profile-photo img {
+        width: 100%;
+        height: auto;
+    }
+    .profile-photo {
+        padding-left: 0;
     }
 }
