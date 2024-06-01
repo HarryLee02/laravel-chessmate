@@ -92,7 +92,8 @@
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         const postContent = textarea.value.trim();
-        const timestamp = new Date.now();
+        const timestamp = Date.now();
+        console.log(timestamp);
         if (postContent !== '') {
             set(ref(database, 'posts/' + timestamp), {
                     content: postContent,
