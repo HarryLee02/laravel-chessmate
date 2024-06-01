@@ -34,7 +34,7 @@
             <div class="content">
                 <div class="row">
                     @foreach ($items['board_theme'] as $item)
-                    <div class="col-md-4">
+                    <div class="item col-md-4">
                         <div class="col-md-12 stuff">
                             <div class="upper-row">
                                 <div class="upper">
@@ -43,16 +43,38 @@
                             </div>
                             <div class="downer">
                                 <p>{{$item['name']}}</p>
-                                <p>{{$item['price']}}</p>
-                                <button type="button" class="btn add-to-cart">Add to cart</button>
+                                <p class="price">{{$item['price']}}</p>
+                                <button type="button" class="btn add-to-cart">Buy</button>
                             </div>
                         </div>
                     </div>
+                    </form>
                     @endforeach
                 </div>
             </div>
         </div>
     </div>
+    <div class="modal fade" id="Modal" style="text-align: center;"> 
+        <div class="modal-dialog modal-dialog-centered"> 
+            <div class="modal-content" > 
+                <div class="modal-header text-center" style="background-color: lightgray;"> 
+                    <div class="modal-title w-100"> 
+                        <span class="modal_placeholder">Scan this QR</span> 
+                    </div> 
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"> 
+                        
+                    </button> 
+                </div> 
+                <div class="modal-body"> 
+                    <img class="QR_placeholder" src="https://api.vietqr.io/image/970436-1015563285-Q3n5IT7.jpg?accountName=LE%20NGOC%20HIEU&amount=10000" alt="QR thanh toán">
+                </div>
+                <div class="modal-footer">
+                    <button id="buy" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div> 
+        </div> 
+	</div>
 </html>
 <script>
 // Srcipt Navbar
@@ -105,6 +127,26 @@
          }
      });
      });
-     // Shop Items
+     // Shop buy
+
+     document.addEventListener('DOMContentLoaded', function() {
+    const items = document.querySelectorAll('.item');
+
+    items.forEach(function(item) {
+    const addToCartButton = item.querySelector('.add-to-cart');
+    const priceElement = item.querySelector('.price');
+
+    addToCartButton.addEventListener('click', function() {
+      const price = priceElement.textContent; // Get the price text
+        const link = 'https://api.vietqr.io/image/970436-1015563285-Q3n5IT7.jpg?accountName=LE%20NGOC%20HIEU&amount=' + price;
+        var modal = new bootstrap.Modal(document.getElementById('Modal'))
+        
+        $('.QR_placeholder').html('<img src="' + link + '" alt="QR thanh toán">')
+        modal.show()
+    });
+  });
+});
+
+
      
 </script>
