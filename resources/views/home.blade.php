@@ -30,9 +30,7 @@
                     </div>    
             
                     <div class="col-md-5">
-                        <div class="img-chess">
-                            <img src="{{asset('img/6.png')}}" class="d-block w-100" alt="Hình ảnh minh họa">
-                        </div>
+                        <div class="img-chess" id="myBoard" style="width: 470px; margin: 0 auto;"></div>
                     </div>
                 </div>
             </div>    
