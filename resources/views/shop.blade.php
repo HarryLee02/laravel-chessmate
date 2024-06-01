@@ -8,7 +8,6 @@
     <!--Search bar-->
         
         <div class="wrapper">
-            
             <div class="label">Find your?</div>
                 <div class="searchBar">
                     <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="What items do you want ? . . ." value="" />
@@ -34,138 +33,20 @@
         <div class="container">
             <div class="content">
                 <div class="row">
+                    @foreach ($items['board_theme'] as $item)
                     <div class="col-md-4">
                         <div class="col-md-12 stuff">
-                        <div class="upper">
-                            <img  src="" width="120" height="120">
-                        </div>
-                        <div class="downer">
-                            <p>Price: $10</p>
-                            <button type="button" class="btn add-to-cart">Add to cart</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col-md-12 stuff">
-                        <div class="upper">
-                            <img  src="" width="120" height="120">
-                        </div>
-                        <div class="downer">
-                            <p>Price: $10</p>
-                            <button type="button" class="btn">Add to cart</button>
-                        </div>
+                            <div class="upper">
+                                <img  src="" width="120" height="120">
+                            </div>
+                            <div class="downer">
+                                <p>{{$item['name']}}</p>
+                                <p>{{$item['price']}}</p>
+                                <button type="button" class="btn add-to-cart">Add to cart</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="col-md-12 stuff">
-                        <div class="upper">
-                            <img  src="" width="120" height="120">
-                        </div>
-                        <div class="downer">
-                            <p>Price: $10</p>
-                            <button type="button" class="btn">Add to cart</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col-md-12 stuff">
-                        <div class="upper">
-                            <img  src="" width="120" height="120">
-                        </div>
-                        <div class="downer">
-                            <p>Price: $10</p>
-                            <button type="button" class="btn">Add to cart</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col-md-12 stuff">
-                        <div class="upper">
-                            <img  src="" width="120" height="120">
-                        </div>
-                        <div class="downer">
-                            <p>Price: $10</p>
-                            <button type="button" class="btn">Add to cart</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col-md-12 stuff">
-                        <div class="upper">
-                            <img  src="" width="120" height="120">
-                        </div>
-                        <div class="downer">
-                            <p>Price: $10</p>
-                            <button type="button" class="btn">Add to cart</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col-md-12 stuff">
-                        <div class="upper">
-                            <img  src="" width="120" height="120">
-                        </div>
-                        <div class="downer">
-                            <p>Price: $10</p>
-                            <button type="button" class="btn">Add to cart</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col-md-12 stuff">
-                        <div class="upper">
-                            <img  src="" width="120" height="120">
-                        </div>
-                        <div class="downer">
-                            <p>Price: $10</p>
-                            <button type="button" class="btn">Add to cart</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col-md-12 stuff">
-                        <div class="upper">
-                            <img  src="" width="120" height="120">
-                        </div>
-                        <div class="downer">
-                            <p>Price: $10</p>
-                            <button type="button" class="btn">Add to cart</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col-md-12 stuff">
-                        <div class="upper">
-                            <img  src="" width="120" height="120">
-                        </div>
-                        <div class="downer">
-                            <p>Price: $10</p>
-                            <button type="button" class="btn">Add to cart</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col-md-12 stuff">
-                        <div class="upper">
-                            <img  src="" width="120" height="120">
-                        </div>
-                        <div class="downer">
-                            <p>Price: $10</p>
-                            <button type="button" class="btn">Add to cart</button>
-                        </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col-md-12 stuff">
-                        <div class="upper">
-                            <img  src="" width="120" height="120">
-                        </div>
-                        <div class="downer">
-                            <p>Price: $10</p>
-                            <button type="button" class="btn">Add to cart</button>
-                        </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

@@ -29,10 +29,6 @@ class FirebaseController extends Controller
      */
     public function shop(Request $request)
     {
-        // if ($request->ajax()) {
-        //     $items = $this->database->getReference("shops/")->getSnapshot(); 
-        //     return response()->json($items);
-        // }
         $items = $this->database->getReference("shops/")->getValue(); 
         return view('shop', compact('items'));
     }
