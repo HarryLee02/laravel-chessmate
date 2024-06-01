@@ -70,7 +70,6 @@
 
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
     import { getDatabase ,ref,set,query,orderByChild, startAt,limitToFirst} from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js';
-    import { } from "https://www.gstatic.com/firebasejs/10.12.1/firebase-auth.js"
     const firebaseConfig = {
         apiKey: "AIzaSyA31lKznykEusxB3k85qKgalt4ILO28cfI",
         authDomain: "chessmate-577b0.firebaseapp.com",
@@ -93,7 +92,7 @@
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         const postContent = textarea.value.trim();
-        const timestamp = Date.now();
+        const timestamp = new Date.now();
         if (postContent !== '') {
             set(ref(database, 'posts/' + timestamp), {
                     content: postContent,

@@ -1,4 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+::-webkit-scrollbar {
+    width: 10px;
+}
+    /* Track */
+::-webkit-scrollbar-track {
+    background: linear-gradient(0deg, rgba(168,237,234,1) 0%, rgba(254,214,227,1) 100%);
+}
+    /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+    /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+    
 *
 {
     margin: 0;
