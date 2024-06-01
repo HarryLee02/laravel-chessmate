@@ -174,7 +174,6 @@ p.heading-form
 .container
 {
   margin:20em auto 0;
-  width: fit-content;
   border: 2px solid white;
   border-radius: 3%;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);

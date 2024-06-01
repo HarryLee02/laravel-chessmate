@@ -3,8 +3,8 @@
     <link href="{{asset('css/shop.css')}}" rel="stylesheet" type="text/css">
 </head>
 <body>
-@include('includes.navbar')
-<div class="mainbody"> 
+    @include('includes.navbar')
+    <div class="mainbody"> 
     <!--Search bar-->
         
         <div class="wrapper">
