@@ -23,9 +23,9 @@
                             <p>A brand new, free and friendly website for learning and practicing <strong style="color: black;">Chess.</strong> </p>
                         </div>
                         <div class="btn-play d-flex">
-                            <button type="button" class="btn btn-success" style="font-size: xx-large;margin: 100px;background-color: aliceblue;border-radius: 50px;border-style:hidden;">
-                            <a class="fas fa-gamepad" style="text-decoration: none;" href="/login"> <i class="custom-link" style="text-decoration: none; color:black;font-style: italic;">Play!</i></a>
-                            </button>
+                            <a type="button" class="btn btn-success" style="font-size: xx-large;margin: 100px;background-color: aliceblue;border-radius: 50px;border-style:hidden;">
+                            <i class="fas fa-gamepad btn btn-success" style="text-decoration: none;" href="/login"> <i class="custom-link" style="text-decoration: none; color:black;font-style: italic;">Play!</i></i>
+                            </a>
                         </div>
                     </div>    
             
@@ -52,7 +52,7 @@
             
                     <div class="col-md-5">
                         <div class="img-chess">
-                            <img src="{{asset('img/7.png')}}" class="img-about d-block w-100" alt="Hình ảnh minh họa">
+                            <img src="{{asset('img/7.webp')}}" class="img-about d-block w-100" alt="Hình ảnh minh họa">
                         </div>
                     </div>
                 </div>
@@ -83,19 +83,19 @@
                     <div class="carousel-inner">
         
                         <div class="carousel-item active" data-bs-interval="5000">
-                            <img src="{{asset('img/1.jpg')}}" class="d-block w-100" alt="Hình ảnh minh họa">
+                            <img src="{{asset('img/1.webp')}}" class="d-block w-100" alt="Hình ảnh minh họa">
                         </div>
         
                         <div class="carousel-item " data-bs-interval="5000">
-                            <img src="{{asset('img/2.jpg')}}" class="d-block w-100" alt="Hình ảnh minh họa">
+                            <img src="{{asset('img/2.webp')}}" class="d-block w-100" alt="Hình ảnh minh họa">
                         </div>
                         
                         <div class="carousel-item " data-bs-interval="5000">
-                            <img src="{{asset('img/3.jpg')}}" class="d-block w-100" alt="Hình ảnh minh họa">
+                            <img src="{{asset('img/3.webp')}}" class="d-block w-100" alt="Hình ảnh minh họa">
                         </div>
         
                         <div class="carousel-item " data-bs-interval="5000">
-                            <img src="{{asset('img/4.jpg')}}" class="d-block w-100" alt="Hình ảnh minh họa">
+                            <img src="{{asset('img/4.webp')}}" class="d-block w-100" alt="Hình ảnh minh họa">
                         </div>
                         
                     </div>

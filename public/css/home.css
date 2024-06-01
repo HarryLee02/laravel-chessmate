@@ -219,7 +219,7 @@ footer
         padding: 0 !important;
         text-align: center;
     }
-    .btn-play button {
+    .btn-play a {
         font-size: larger!important;
         margin: 1rem 0 1rem 9rem !important;
         background-color: aliceblue;
@@ -250,7 +250,7 @@ footer
     }
     .img-chess .img-about
     {
-        width: 142% !important;
+        width: 100% !important;
         justify-content: center;
         margin-left: -3rem;
     }
