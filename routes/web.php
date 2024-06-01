@@ -13,12 +13,13 @@ Route::get('/', function () {
 Route::post('/broadcast', [PusherController::class, 'broadcast']);
 Route::post('/receive', [PusherController::class, 'receive']);
 
-
+Route::get('/online', function () {
+        // return view('online');
+        abort('503');
+});
 
 Route::middleware(['logged_in'])->group(function () {
-    Route::get('/online', function () {
-        return view('online');
-    });
+    
     Route::get('/puzzle', function () {
         return view('puzzle');
     });

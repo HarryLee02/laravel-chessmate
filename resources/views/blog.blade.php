@@ -58,7 +58,7 @@
         });
 
         window.addEventListener('resize', function() {
-            if (window.innerWidth > 1000) {
+            if (window.innerWidth > 400) {
                 navItems.forEach(item => item.style.display = 'block');
                 loginBtn.style.display = 'block';
             } else {

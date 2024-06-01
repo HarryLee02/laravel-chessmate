@@ -12,14 +12,14 @@
                 <div class="col-md-6">
                     <button class="button-computer" onclick="window.location.href='/computer' ">
                         <span>Computer</span>
-                        <img src="{{asset('img/IMGcomputer.png')}}" alt="Hình minh họa">
+                        <img src="{{asset('img/IMGcomputer.webp')}}" alt="Hình minh họa">
                     </button>
                 </div>
                 
                 <div class="col-md-6">
                     <button class="button-online" onclick="window.location.href='/online' ">
                         <span>Online</span>
-                        <img src="{{asset('img/IMGonline.png')}}" alt="Hình minh họa">
+                        <img src="{{asset('img/IMGonline.webp')}}" alt="Hình minh họa">
                     </button>
                 </div>
 
@@ -28,14 +28,14 @@
                 <div class="col-md-6">
                     <button class="button-practice" onclick="window.location.href='/practice'">
                         <span>Practice</span>
-                        <img src="{{asset('img/IMGpractice.png')}}" alt="Hình minh họa">
+                        <img src="{{asset('img/IMGpractice.webp')}}" alt="Hình minh họa">
                     </button>
                 </div>
 
                 <div class="col-md-6">
                     <button class="button-puzzle" onclick="window.location.href='/puzzle'">
                         <span>Puzzle</span>
-                        <img src="{{asset('img/IMGpuzzle.png')}}" alt="Hình minh họa">
+                        <img src="{{asset('img/IMGpuzzle.webp')}}" alt="Hình minh họa">
                     </button>
                 </div>
                 
@@ -86,7 +86,7 @@
      });
 
      window.addEventListener('resize', function () {
-         if (window.innerWidth > 1000) {
+         if (window.innerWidth > 400) {
              navItems.forEach(item => item.style.display = 'block');
              loginBtn.style.display = 'block';
          } else {
