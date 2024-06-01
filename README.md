@@ -13,11 +13,11 @@ Apache Webserver setup tutorial: https://youtu.be/gjzptnxvX6Q?si=OmutSIZUG0guNkZ
 - Sign out
 ## Contributing
 - **Team members:**
-    - Lê Ngọc Hiếu
-    - Nguyễn Việt Hoàng 
-    - Ngô Hồng Phúc
-    - Võ Nguyễn Thái Học
-    - Trần Minh Hiếu
+    - Lê Ngọc Hiếu        -    22520435
+    - Nguyễn Việt Hoàng   -    22520471
+    - Ngô Hồng Phúc       -    22521124
+    - Võ Nguyễn Thái Học  -    22520489
+    - Trần Minh Hiếu      -    22520445
 - **Supervisors:**
     - Trần Tuấn Dũng
 ## Requirement
