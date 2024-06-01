@@ -23,8 +23,8 @@
                             <p>A brand new, free and friendly website for learning and practicing <strong style="color: black;">Chess.</strong> </p>
                         </div>
                         <div class="btn-play d-flex">
-                            <a type="button" class="btn btn-success" style="font-size: xx-large;margin: 100px;background-color: aliceblue;border-radius: 50px;border-style:hidden;">
-                            <i class="fas fa-gamepad" style="text-decoration: none;" href="/login"> <i class="custom-link" style="text-decoration: none; color:black;font-style: italic;">Play!</i></i>
+                            <a class="btn btn-success" role="button" href="/login" style="font-size: xx-large;margin: 100px;background-color: aliceblue;border-radius: 50px;border-style:hidden;">
+                            <i class="fas fa-gamepad" style="text-decoration: none;"> <i class="custom-link" style="text-decoration: none; color:black;font-style: italic;">Play!</i></i>
                             </a>
                         </div>
                     </div>    
