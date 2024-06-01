@@ -78,38 +78,38 @@
     });
      // Pusher channels
 
-    const pusher = new Pusher('{{ config("broadcasting.connections.pusher.key") }}', {cluster: 'eu'});
-    const channel = pusher.subscribe('public');
+    // const pusher = new Pusher('{{ config("broadcasting.connections.pusher.key") }}', {cluster: 'eu'});
+    // const channel = pusher.subscribe('public');
 
-     //receive move
-    channel.bind('move',function(data)
-    {
-        $.post('/receive',{
-            _token: '{{csrf_token()}}',
-            move: data.move,
-        }).done(function(res)
-        {
-            if(data.move)
-            {
-                board.position(res.move);
-                board.resize();
-            }
-        });
-    })
+    //  //receive move
+    // channel.bind('move',function(data)
+    // {
+    //     $.post('/receive',{
+    //         _token: '{{csrf_token()}}',
+    //         move: data.move,
+    //     }).done(function(res)
+    //     {
+    //         if(data.move)
+    //         {
+    //             board.position(res.move);
+    //             board.resize();
+    //         }
+    //     });
+    // })
 
-    //send move
-    $('#myBoard').on('move',function(data)
-    {
-        $.ajax({
-            url: '/broadcast',
-            method: 'POST',
-            headers: {
-                'X-Socket-Id': pusher.connection.socket_id
-            },
-            data: {
-                _token: '{{csrf_token()}}',
-                move: data.move,
-            }
-        });
-    });
+    // //send move
+    // $('#myBoard').on('move',function(data)
+    // {
+    //     $.ajax({
+    //         url: '/broadcast',
+    //         method: 'POST',
+    //         headers: {
+    //             'X-Socket-Id': pusher.connection.socket_id
+    //         },
+    //         data: {
+    //             _token: '{{csrf_token()}}',
+    //             move: data.move,
+    //         }
+    //     });
+    // });
  </script>
