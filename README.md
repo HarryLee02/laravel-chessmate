@@ -3,11 +3,12 @@
 
 ## About ChessMate
 
-ChessMate is a web application built using [Laravel framework](https://laravel.com/docs/11.x/) and [Firebase](https://firebase.google.com/) Realtime Database.
-Live example [here](https://chessmate.games/)
+ChessMate is a web application built using [Laravel framework](https://laravel.com/docs/11.x/) and [Firebase](https://firebase.google.com/) Realtime Database.\
+Live example [here](https://chessmate.games/).\
 Apache Webserver setup tutorial: https://youtu.be/gjzptnxvX6Q?si=OmutSIZUG0guNkZ7
 ## Working features
 - Play with computer
+- Practice
 - QR code for shop items
 - Sign in
 - Sign out
@@ -29,14 +30,14 @@ Apache Webserver setup tutorial: https://youtu.be/gjzptnxvX6Q?si=OmutSIZUG0guNkZ
 ### Additional packages
 - [laravel-firebase](https://github.com/kreait/laravel-firebase#configuration)
 ## Installation
-```bash
+```
 git clone https://github.com/HarryLee02/laravel-chessmate.git
 cd laravel-chessmate
 composer update
 ```
 Download the **Firebase Admin SDK private key** file.
 Paste the file in the root of the project
-```bash
+```
 \laravel-chessmate\privatekey.json
 ```
 Then manually change the `.env` file with your key 
@@ -52,6 +53,7 @@ Then run `php artisan serve` and access http://127.0.0.1:8080
 
 ## Underdevelop features
 - Playing online (Realtime with Laravel is **hard**)
+- Puzzle
 - Admin page
 - Post blogs (can post but not showing yet)
 - More computers (Stockfish, Komodo, .etc)
