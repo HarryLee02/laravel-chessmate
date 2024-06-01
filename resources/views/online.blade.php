@@ -107,7 +107,7 @@
                 'X-Socket-Id': pusher.connection.socket_id
             },
             data: {
-                _token: '{{csrf_token}}',
+                _token: '{{csrf_token()}}',
                 move: data.move,
             }
         });
