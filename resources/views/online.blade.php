@@ -79,23 +79,37 @@
      // Pusher channels
 
     const pusher = new Pusher('{{ config("broadcasting.connections.pusher.key") }}', {cluster: 'eu'});
-    const channel = pusher.subscribe('chess-moves');
+    const channel = pusher.subscribe('public');
 
      //receive move
-    channel.bind('MakeMove',function(data)
+    channel.bind('move',function(data)
     {
-        const fromSquare = data.from;
-        const toSquare = data.to;
-        console.log(fromSquare);
-        console.log(toSquare);
-    })
-    //send move
-    const sendMove = (from,to) =>
-    {
-        channel.trigger('MakeMove',{
-            from: from,
-            to: to
+        $.post('/receive',{
+            _token: '{{csrf_token()}}',
+            move: data.move,
+        }).done(function(res)
+        {
+            if(data.move)
+            {
+                board.position(res.move);
+                board.resize();
+            }
         });
-    }
-    
+    })
+
+    //send move
+    $('#myBoard').on('move',function(data)
+    {
+        $.ajax({
+            url: '/broadcast',
+            method: 'POST',
+            headers: {
+                'X-Socket-Id': pusher.connection.socket_id
+            },
+            data: {
+                _token: '{{csrf_token}}',
+                move: data.move,
+            }
+        });
+    });
  </script>
