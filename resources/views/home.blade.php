@@ -24,7 +24,7 @@
                         </div>
                         <div class="btn-play d-flex">
                             <button type="button" class="btn btn-success" style="font-size: xx-large;margin: 100px;background-color: aliceblue;border-radius: 50px;border-style:hidden;">
-                            <i class="fas fa-gamepad" style="text-decoration: none;"> <i class="custom-link" style="text-decoration: none; color:black;font-style: italic;" onclick="login()">Play!</i></i>
+                            <a class="fas fa-gamepad" style="text-decoration: none;" href="/login"> <i class="custom-link" style="text-decoration: none; color:black;font-style: italic;">Play!</i></a>
                             </button>
                         </div>
                     </div>    
