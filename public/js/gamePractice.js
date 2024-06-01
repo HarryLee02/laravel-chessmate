@@ -3,24 +3,16 @@ import {Chess} from './chess.js'
 var board = null
 var game = new Chess()
 
-function onDragStartWhite (source, piece, position, orientation) {
+function onDragStart (source, piece, position, orientation) {
   // do not pick up pieces if the game is over
   if (game.isGameOver()) return false
 
-  // only pick up White pieces to move
-  if (piece.search(/^b/) !== -1) {
+  // only pick up pieces for the side to move
+  if ((game.turn() === 'w' && piece.search(/^b/) !== -1) ||
+      (game.turn() === 'b' && piece.search(/^w/) !== -1)) {
     return false
   }
 }
-function onDragStartBlack (source, piece, position, orientation) {
-  // do not pick up pieces if the game is over
-  if (game.isGameOver()) return false
-  // only pick up Black pieces to move
-  if (piece.search(/^w/) !== -1) {
-    return false
-  }
-}
-
 function onDrop (source, target) {
   // see if the move is legal
   try{
@@ -86,7 +78,7 @@ var config = {
   draggable: true,
   position: 'start',
   orientation:'white',
-  onDragStart: onDragStartWhite,
+  onDragStart: onDragStart,
   onDrop: onDrop,
   onSnapEnd: onSnapEnd
 }
@@ -94,34 +86,6 @@ board = Chessboard('myBoard', config)
 
 updateStatus()
 
-$('#black').on('click', function () {
-  var config = {
-    orientation: 'black',
-    draggable: true,
-    position: 'start',
-    onDragStart: onDragStartBlack,
-    onDrop: onDrop,
-    onSnapEnd: onSnapEnd
-  }
-  board = Chessboard('myBoard', config)
-  game.reset()
-  makeRandomMove()
-  updateStatus()
-})
-
-$('#white').on('click', function () {
-  var config = {
-    orientation:'white',
-    draggable: true,
-    position: 'start',
-    onDragStart: onDragStartWhite,
-    onDrop: onDrop,
-    onSnapEnd: onSnapEnd
-  }
-  board = Chessboard('myBoard', config)
-  game.reset()
-  updateStatus()
-})
 
 $('#resign').on('click', function () {
   var audio = new Audio('../sound/game-end.mp3')
@@ -132,7 +96,7 @@ $('#resign').on('click', function () {
   var config = {
     draggable: true,
     position: 'start',
-    onDragStart: onDragStartWhite,
+    onDragStart: onDragStart,
     onDrop: onDrop,
     onSnapEnd: onSnapEnd
   }
