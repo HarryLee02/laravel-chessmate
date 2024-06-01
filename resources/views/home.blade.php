@@ -21,12 +21,11 @@
                     <br/>
                     <div class="para" style="font-size: 20px;">
                         <p>A brand new, free and friendly website </p>
-                        <p>designed for learning and practicing <a style="font-weight: bold;color: black;">Chess.</a> </p>
+                        <p>designed for learning and practicing <strong style="color: black;">Chess.</strong> </p>
                     </div>
                     <div class="btn-play d-flex">
                         <button type="button" class="btn btn-success" onclick="login()" style="font-size: xx-large;margin: 100px;background-color: aliceblue;border-radius: 50px;border-style:hidden;">
-                                <a class="fas fa-gamepad" style="text-decoration: none;"> <i class="custom-link" style="text-decoration: none; color:black;font-style: italic;">Play now!</i></a>
-                                
+                        <i class="fas fa-gamepad" style="text-decoration: none;"> <i class="custom-link" style="text-decoration: none; color:black;font-style: italic;">Play now!</i></i>
                         </button>
                     </div>
                 </div>
@@ -43,10 +42,10 @@
                     <h1 style="color:black; font-weight: bold;font-size: xxx-large;"> About us </h1>
                     <br/>
                     <div class="paragraph" style="font-size: 20px;">
-                    <p style="font-style: italic;">“<a style="font-weight: bold;">Chess</a> is hard”.</p>
+                    <p style="font-style: italic;">“<strong>Chess</strong> is hard”.</p>
                     <p class="paragraph1">
                         While many see Chess as an elegant and intellectual game, involving mind-blowing tactics and countless hours mastering how to move 16 pieces, there's a deeper layer waiting to be explored. 
-                        Beyond the board, emotions come alive <a style="font-weight: bold;font-style: italic;"> glory, relief, anxiety, victory </a>- as dedicated players immerse themselves in this timeless pursuit. It's those feelings that makes Chess so attractive.
+                        Beyond the board, emotions come alive <strong style="font-style: italic;"> glory, relief, anxiety, victory </strong>- as dedicated players immerse themselves in this timeless pursuit. It's those feelings that makes Chess so attractive.
                     </p>
                     </div>
                 </div>
