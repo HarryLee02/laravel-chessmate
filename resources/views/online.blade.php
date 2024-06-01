@@ -2,7 +2,7 @@
     @include('includes/boardheader')
     <title>Online</title>
     <link href="{{asset('css/online.css')}}" rel="stylesheet">
-    <!-- <script src="{{asset('js/gameOnline.js')}}" type="module"></script> -->
+    <script src="{{asset('js/gameOnline.js')}}" type="module"></script>
 </head>
 <body>
     @include('includes.navbar')
@@ -21,6 +21,27 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="Modal" style="text-align: center;"> 
+        <div class="modal-dialog modal-dialog-centered"> 
+            <div class="modal-content" > 
+                <div class="modal-header text-center" style="background-color: lightgray;"> 
+                    <div class="modal-title w-100"> 
+                        <span class="modal_placeholder">Modal</span> 
+                    </div> 
+                    <button type="button" class="btn-close"
+                        data-bs-dismiss="modal" aria-label="Close"> 
+                        
+                    </button> 
+                </div> 
+                <div class="modal-body"> 
+                    <button type="button" class="btn btn-success" onclick="window.location.href='/home';">Return home</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div> 
+        </div> 
+	</div>
 </body>
 </html>
 <script>
