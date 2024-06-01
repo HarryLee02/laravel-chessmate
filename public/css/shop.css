@@ -240,40 +240,45 @@ nav{
       padding-right: 17.5px;
     }
   }
-.stuff {
-    height: 220px;
-    background-color: #ffffff;
-    margin-top: 20px;
-    box-shadow: 5px 5px rgba(45, 45, 45, 0.13);
+  .row {
+    display: flex; 
+    flex-wrap: wrap; 
+    margin: 1rem;
 }
-  
+
+.col-md-4 {
+    flex: 1; 
+    max-width: 33.333%; 
+    box-sizing: border-box; 
+}
+.stuff { 
+    background-color: #f8f8f8; 
+    padding: 20px;
+    text-align: center;
+}
+.upper-row {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
 .upper {
-    width: 100%;
-    height: 160px;
-    border-bottom: 1px solid rgba(45, 45, 45, 0.33);
-    img {
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin-top: 20px;
-      margin-right: auto;
-      margin-left: auto;
-    }
+    margin: 10px; 
 }
 .downer {
-    margin-top: 15px;
-    p {
-        display: inline-block;
-    }
-    button {
-      color: #ffffff;
-      text-transform: uppercase;
-      font-size: 12.5px;
-      margin-top: -3px;
-      float: right;
-      border-radius: 0;
-      background-color: #3a3a3a;
-    }
+    text-align: center; 
+}
+
+.btn.add-to-cart {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn.add-to-cart:hover {
+    background-color: #0056b3;
 }
   
 @media only screen and (max-width: 400px) and (orientation: portrait){
@@ -363,5 +368,19 @@ nav{
       
         width:80px;
         left: 305px;
+    }
+    .col-md-4 {
+        max-width: 100%; 
+        flex: 0 0 100%; 
+        margin-bottom: 1rem; 
+    }
+
+    .stuff {
+        padding: 10px; 
+    }
+
+    .btn.add-to-cart {
+        padding: 5px 10px; 
+        font-size: 0.9rem; 
     }
 }

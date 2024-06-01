@@ -28,6 +28,7 @@ Route::middleware(['logged_in'])->group(function () {
     Route::get('/shop', [FirebaseController::class, 'shop']);
     
     Route::post('/online-checkout', [FirebaseController::class, 'buy']);
+    Route::post('/posts', [FirebaseController::class, 'posts']);
 });
 
 Route::get('/{route}', function ($route) {

@@ -23,6 +23,12 @@ class FirebaseController extends Controller
 
         return view('profile', compact('informations'));
     }
+    public function posts(Request $request)
+    {
+        $posts = $this->database->getReference("posts/")->getValue();
+
+        return view('posts', compact('posts'));
+    }
 
     /**
      * Show the form for creating a new resource.
