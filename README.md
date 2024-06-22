@@ -19,7 +19,7 @@ Apache Webserver setup tutorial: https://youtu.be/gjzptnxvX6Q?si=OmutSIZUG0guNkZ
     - Ngô Hồng Phúc       -    22521124
     - Võ Nguyễn Thái Học  -    22520489
     - Trần Minh Hiếu      -    22520445
-- **Supervisors:**
+- **Lecturer:**
     - Trần Tuấn Dũng
 ## Requirement
 - [Firebase account](https://firebase.google.com/)
@@ -59,3 +59,32 @@ Then run `php artisan serve` and access http://127.0.0.1:8080
 - More computers (Stockfish, Komodo, .etc)
 ## Side notes
 All of the frontend is stored in [this](https://github.com/HarryLee02/ChessMate_Frontend).
+
+## Questions from Lecturer (Vietnamese)
+1. Nginx sẽ được dùng cấu hình như thế nào? ( What's the configuration of Nginx (?) )
+
+> 
+
+2. Web server khác với web service ở điểm nào? ( What's the difference between Web server and Web service? )
+
+>
+
+3. Giải thích rõ hơn về Web Server. ( Explain more about Web Server)
+
+>
+
+4. Các webServer khác nhau có những điểm mạnh khác nhau, vậy từng loại webServer sẽ phù hợp với những trường hợp nào? ( Each Web Server has its own strength, then which one is suitable in which case? )
+
+>
+
+5. Trong LAMP, WAMP, … dùng cái nào thì tối ưu nhất? ( In LAMP, WAMP, ... which (Web Server) is the most optimal?
+
+>
+
+6. Trong một môi trường có nhiều ứng dụng web chạy song song, bạn sẽ sử dụng apache hay engine x (Nginx) cho cân bằng tải? Tại sao? ( In an environment which has multiple Web application running at the same time, will you choose Apache or Nginx for load balancing? Why? )
+
+>
+
+7. Tại sao không dùng nginx với php mà lại dùng apache với php mặc dù nginx hiệu suất cao hơn? ( Why not use Nginx with PHP even though Nginx has better efficiency than Apache ?)
+
+>
